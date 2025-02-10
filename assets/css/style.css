@@ -8,12 +8,12 @@
 
     /* HSL Color Mode */
     --skin-color: hsl(342, 92%, 46%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: hsl(var(--hue-color), 8%, 85%);
-    --body-color: hsl(var(--hue-color), 19%, 5%);
-    --box-color: hsl(var(--hue-color), 14%, 10%);
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 30%);
+    --body-color: hsl(var(--hue-color), 80%, 98%);
+    --box-color: hsl(var(--hue-color), 85%, 95%);
+    --scroll-bar-color: hsl(var(--hue-color), 75%, 85%);
+    --scroll-thumb-color: hsl(var(--hue-color), 60%, 75%);
 
     /*===== Font and Typography =====*/
     --body-font: 'Poppins', sans-serif;
@@ -262,7 +262,7 @@ input {
 
 /*===== Home Section =====*/
 .home {
-    background: url('../img/home-bg.jpg');
+    /* background: url('../img/home-bg.jpg'); */
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -372,25 +372,13 @@ input {
     font-weight: var(--font-medium);
     position: relative;
     z-index: 1;
+    transition: all 0.4s ease-in-out;
 }
 
-.button::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #343a40;
-    z-index: -1;
-    transform-origin: center;
-    transform: scale(0);
-    border-radius: .25rem;
-    transition: .3s;
-}
-
-.button:hover::after {
-    transform: scale(1);
+.button:hover {
+    border-radius: 2rem; /* Згладжені краї */
+    color: hsl(var(--hue-color), 8%, 95%); /* Світлий текст */
+    transition: all 0.4s ease-in-out;
 } 
 
 .button__icon {
